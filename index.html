@@ -5,8 +5,7 @@
         <title>The CSS Box Model and Common Properties</title>
 
         <!-- ADD YOUR NAME TO THE AUTHOR TAG -->
-        <!-- TO DO -->
-        <meta name="author" content="">
+        <meta name="author" content="Tristan Ibarra">
         <meta name="description" content="Practicing the CSS Box Model and commonly used CSS properties">
 
         <!-- THIS META TAG IS INCLUDED BECAUSE THIS PAGE IS RESPONSIVE -->
@@ -18,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
 
         <!-- LINK TO CSS FILE -->
-        <!-- TO DO -->
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body id="top">
         <header>
@@ -115,85 +114,50 @@
                     Photo by <a href="https://unsplash.com/@oddityandgrace?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">hannah grace</a> on <a href="https://unsplash.com/images/animals/puppies?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 -->
                 <p>
-                    Notice that the image is tiled (repeated). The first image is placed in the upper-left-hand corner of the container, and then it fills the space with the tiled image until it runs out. If the container is wider or taller than a full row or column of images, it will still add the image there, but will cut it off partially.
+                    Notice that the image is tiled (repeated). The first image is placed in the upper-left-hand corner of the container, and then it fills the space with the tiled image until it runs out. If the container is wider or taller than a full row or column of images, it will repeat across the container until it is full.
                 </p>
             </section>
 
             <section id="section6">
-                <!-- Background Images with CSS -->
-                <h2>Background Images with CSS - Control Alignment</h2>
+                <!-- Background images with different image alignments -->
+                <h2>Background Images - Alignment</h2>
                 <p>
-                    We know now that a <code>background-image</code> will fill a container in tiles, but we can tell the CSS not to tile the image. We can also control the alignment of those tiles or individual images with CSS, and you can include a <code>background-color</code> in the container as well.
+                    There are a few properties you can use to change how the background image behaves and where it aligns, including <code>background-position</code> and <code>background-size</code>.
                 </p>
-                <div id="bg-img-1"></div>
-                <div id="bg-img-2"></div>
-                <div id="bg-img-3"></div>
-                <div id="bg-img-4"></div>
-                <div id="bg-img-5"></div>
+                <div id="bkgrnd-img-align"></div>
             </section>
 
             <section id="section7">
-                <!-- Background Images with CSS -->
-                <h2>Background Images with CSS - Background Patterns</h2>
+                <!-- Background images: patterns -->
+                <h2>Background Images - Patterns</h2>
                 <p>
-                    There are a lot of websites that offer repeating pattern images that you can use on your website. <a href="https://www.transparenttextures.com/" target="_blank">Transparent Textures</a>, <a href="https://heropatterns.com/" target="_blank">Hero Patterns</a>, and <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Subtle Patterns</a> all have a lot of options. There are also CSS background websites like <a href="https://www.magicpattern.design/tools/css-backgrounds" target="_blank">CSS Background Patterns</a> and <a href="https://projects.verou.me/css3patterns/" target="_blank">CSS3 Patterns Gallery</a>.
+                    You can also use CSS to apply repeated patterns as background images.
                 </p>
-                <div id="pattern1"></div>
-                <div id="pattern2"></div>
-                <div id="pattern3"></div>
-                <div id="pattern4"></div>
-                <div id="pattern5"></div>
+                <div id="bkgrnd-img-pattern"></div>
             </section>
 
             <section id="section8">
-                <!-- Floats -->
-                <h2>Floating Content with CSS</h2>
+                <!-- Using Floats -->
+                <h2>Using Floats</h2>
                 <p>
-                    Below, I have linked to two dog-related SVG files from the images folder in <code>img</code> tags (you can also paste SVG code directly into your HTML). Let's adjust the styles here so that the text appears to flow around the images, with one image on each side of the container.
+                    We have already seen that floating elements can change the flow of a page, so let's explore what happens when you float items to the left and right.
                 </p>
-                <img src="images/corgi.svg" alt="vector drawing of a smiling corgi's face" width="100" height="100" class="img-100" id="corgi">
-                <p id="puppy-p">
-                    What cute puppies! We can <code>clear</code> the <code>float</code> on this paragraph. Let's use a <code>float</code> for their main purpose, which is to <code>display</code> text that wraps around an image, side-by-side.
-                </p>
-                <img src="images/dog-house.svg" alt="vector of a dog house" width="100" height="100" id="dog-house">
-                <p>
-                    This is the text that we want to wrap around the dog house on the right. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                </p>
+                <div class="float-example float-left">
+                    <img src="images/left-float.png" alt="image with left float">
+                </div>
+                <div class="float-example float-right">
+                    <img src="images/right-float.png" alt="image with right float">
+                </div>
             </section>
 
             <section id="section9">
-                <!-- The Display property -->
+                <!-- Display Property -->
                 <h2>The Display Property</h2>
                 <p>
-                    The <code>display</code> property gives you a lot of control over the layout of elements on your pages. Many elements that are difficult to style because they <code>display: inline;</code>, you can change them to <code>block</code> with this property! Throughout this activity, we've seen the <code>display</code> property changed on elements to allow for the desired styling. In Module 5, we'll learn how to use this property to make <code>grid</code> and <code>flexbox</code> containers.
+                    The <code>display</code> property is one of the most important in CSS because it defines the type of box the element will generate. You can use this property to change how an element appears on the page.
                 </p>
-                <dl>
-                    <dt><code>display</code> property values:</dt>
-                        <dd>&#8277;&nbsp;<code>inline</code></dd>
-                        <dd>&#8277;&nbsp;<code>block</code></dd>
-                        <dd>&#8277;&nbsp;<code>none</code></dd>
-                        <dd>&#8277;&nbsp;<code>inline-block</code></dd>
-                        <dd>&#8277;&nbsp;<code>list-item</code></dd>
-                        <dd>&#8277;&nbsp;<code>flexbox</code></dd>
-                        <dd>&#8277;&nbsp;<code>grid</code></dd>
-                </dl>
             </section>
-            <a href="#top" id="btt" aria-label="back to top of page">
-                    <svg enable-background="new 0 0 50 50" height="50" viewbox="0 0 512 512" width="50" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <g>
-                                <g>
-                                    <path d="m256 16c-132.64 0-240 107.341-240 240 0 132.641 107.34 240 240 240 132.642 0 240-107.341 240-240 0-132.64-107.341-240-240-240zm109.602 249.602c-7.81 7.81-20.474 7.81-28.284 0l-61.318-61.318v151.716c0 11.046-8.954 20-20 20s-20-8.954-20-20v-151.716l-61.318 61.318c-7.811 7.811-20.474 7.81-28.284 0-7.811-7.811-7.811-20.474 0-28.284l95.46-95.46c7.806-7.806 20.489-7.796 28.284 0l95.46 95.46c7.811 7.81 7.811 20.474 0 28.284z"/>
-                                </g>
-                            </g>
-                        </g></svg>
-            </a>
-        </main>
 
-        <footer>
-            <p>
-                Copyright &copy; 2023 - GIT215 - Prof. Barnett
-            </p>
-        </footer>
+        </main>
     </body>
 </html>
